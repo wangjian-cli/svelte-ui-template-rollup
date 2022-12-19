@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script src="../pack/svelte.umd.js"></script>
+    <div id="app">
+    </div>
+    <script>
+        const svelte = new window.svelteSdk.Counter({
+            target: document.getElementById('app'),
+            props: {}
+        })
+        svelte.$on('plusCount', (data) => {
+            console.log(data.detail);
+        })
+    </script>
+</body>
+
+</html>
